@@ -30,7 +30,7 @@ public class StopWatch {
             startTime=LocalTime.now();
         }
         public void end(){
-            endTime=LocalTime.now();
+             endTime=LocalTime.now();
         }
         public int getElapsedTime(){
             int milisecond=-(((startTime.getHour()-endTime.getHour())*3600+(startTime.getMinute()-endTime.getMinute())*60+(startTime.getSecond()-endTime.getSecond()))*1000);
