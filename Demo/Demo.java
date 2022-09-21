@@ -1,6 +1,6 @@
 package Demo;
 
-//public class Demo {
+public class Demo {
 ////    Inner Classes:
 //
 ////    Trong Java, cũng có thể lồng các lớp (một lớp trong một lớp).
@@ -11,28 +11,42 @@ package Demo;
 ////    rồi tạo một đối tượng của lớp bên trong:
 //
 //
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        OuterClass myOuter = new OuterClass();
 ////        inner class:Sử dụng tham chiếu của một đối tượng của lớp bên ngoài để truy
 ////         xuất đến Innerclass:
 //        OuterClass.InnerClass myInner = myOuter.new InnerClass();
-////       statis nested class: sử dụng lớp bên ngoài để truy cập lớn bên trong:
-////        OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
+//       statis nested class: sử dụng lớp bên ngoài để truy cập lớn bên trong:
+//        OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
 //
 //        System.out.println(myInner.y + myOuter.x);
-//    }
+
+        OuterClass myOuter = new OuterClass();
+        OuterClass.StaticNestedClass staticNestedClass = new OuterClass.StaticNestedClass();
+        OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
+
+        //OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
+        
+    }
 //
-//}
+}
 //
-//class OuterClass {
-//    int x = 10;
-////    class StaticNestedClass{
-////
-////    }
-//    class InnerClass {
-//        int y = 5;
-//    }
-//}
+class OuterClass {
+    public int x = 10;
+     static class StaticNestedClass{
+        public StaticNestedClass(){
+//            x = 100;
+            System.out.println("StaticNestedClass đang khoi tao");
+        }
+     }
+    class InnerClass {
+        int y = 5;
+        public InnerClass(){
+            x = 11;
+        }
+
+    }
+}
 
 //    Private Inner Class
 //Không giống như một lớp "thông thường", một lớp bên trong có thể là privatehoặc protected.
