@@ -13,4 +13,4 @@ a = [1,6,7], b=[5,6] => [1,6,7,5,6]
 9. Kiểm tra xem mảng b có phải là con mảng b hay không
 b= [5,6], a=[1,6,7,5,6] => b là con mảng a
 10. Sao chép 1 mảng từ vị trí from đến vị trí to
-a=[1,6,7,5,6], from= 2, to= 4 => b=[7,5,6]
+a=[1,6,7,5,6], from= 2, to= 4 => 2b=[7,5,6]
